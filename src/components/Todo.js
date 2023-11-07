@@ -28,7 +28,9 @@ function Todo({todos,completetodo,removetodo,updateTodo}) {
     <div className={todo.isComplete ? 'todo-row complete':'todo-row'} key={index}>
 
       <div key={todo.id} onClick={()=>{completetodo(todo.id)}}>
-        {todo.text}
+        <b>{todo.text.split("/")[0]}</b><br/>
+        <small>{todo.text.split("/")[1]}</small>
+
       </div>
 
       <div className='icons'>
